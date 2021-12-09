@@ -4,6 +4,7 @@ import chess.ChessPiece;
 
 public class Board {
 
+	private static final Piece piece = null;
 	private int rows;
 	private int columns;
 	private Piece[][] pieces;
@@ -36,7 +37,11 @@ public class Board {
 	
 	public Piece piece(Position position) {
 		return pieces[position.getRow()][position.getColumn()];
-
+	}
+	
+		public void placePiece(Piece piece, Position position) {
+			pieces[position.getRow()][position.getColumn()] =piece ;
+			piece.position = position;
 	}
 }	
 
